@@ -2,3 +2,11 @@
 aws_region: il-central-1
 aws_region_short: ilc1
 route53_hostedzone_id: Z1015433RZV9CXS5NKKV
+ssh_key_name: imtec
+vpc_id: vpc-042cee0fdc6a5a7e2
+private_subnet_ids:
+  - subnet-01e6348062924d048
+  - subnet-088b7d937a4cd5d85
+public_subnet_ids:
+  - subnet-0d0b0b1b77639731b
+  - subnet-0a1cbd99dd27a5307 
