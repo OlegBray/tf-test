@@ -30,7 +30,7 @@ variable "owner" {
   type        = string
 }
 variable "Name" {
-  description = "Name tag for resources"
+  description = "name tag for resources"
   type        = string
 }
 
