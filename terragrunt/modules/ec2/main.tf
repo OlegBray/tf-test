@@ -18,7 +18,7 @@ resource "aws_instance" "linux_server" {
   associate_public_ip_address = true
 
   tags = {
-    Name = var.Name
+    Name = var.name
     Owner = var.owner
   }
 }
