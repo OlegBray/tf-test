@@ -35,11 +35,11 @@ variable "is_public" {
 	default = false
 }
 
-variable "public_subnet" {
+variable "private_subnet_ids" {
   type = string
 }
 
-variable "private_subnet" {
+variable "public_subnet_ids" {
   type = string
 }
 
