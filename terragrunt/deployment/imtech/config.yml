@@ -3,3 +3,4 @@ project: imtech
 bucket_region: il-central-1
 instance_type: m5.large
 instance_name: "${project}-instance-${environment}"
+is_public: false

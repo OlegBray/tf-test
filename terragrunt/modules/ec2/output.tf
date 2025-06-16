@@ -13,3 +13,6 @@ output "private_ip" {
   value       = aws_instance.linux_server.private_ip
 }
 
+output "random_int" {
+ value = random_integer.id.result
+}

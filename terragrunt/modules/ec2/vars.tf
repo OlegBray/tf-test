@@ -8,10 +8,6 @@ variable "ami_id" {
   # You can override this variable during terraform apply
 }
 
-variable "subnet_id" {
-  description = "Subnet ID where the instance will be launched"
-}
-
 variable "ssh_key_name" {
   description = "Name of the existing Key Pair"
 }
@@ -36,11 +32,11 @@ variable "is_public" {
 }
 
 variable "private_subnet_ids" {
-  type = string
+	type = list
 }
 
 variable "public_subnet_ids" {
-  type = string
+	type = list
 }
 
 variable "route53_hostedzone_id" {

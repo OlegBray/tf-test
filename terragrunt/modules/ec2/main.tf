@@ -7,12 +7,12 @@ provider "aws" {
 resource "random_integer" "id" {
   min = 0
   max = 1
-  seed = var.public_subnet_ids
 }
 
 locals {
-
- subnet_id = var.is_public ? public_subnet_ids[0] : var.public_subnet_ids[0]
+ first_subnet_private = var.private_subnet_ids[random_integer.id.result]
+ first_subnet_public = var.public_subnet_ids[random_integer.id.result]
+ subnet_id = var.is_public ? local.first_subnet_public : local.first_subnet_private
 
 }
 
