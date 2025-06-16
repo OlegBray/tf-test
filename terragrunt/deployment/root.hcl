@@ -45,6 +45,7 @@ locals {
   environment = local.merged_config.environment
   aws_region  = local.merged_config.aws_region
   bucket_region = local.merged_config.bucket_region
+  owner = local.merged_config.owner
 
 
 }

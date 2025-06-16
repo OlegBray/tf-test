@@ -1,5 +1,6 @@
 ---
 aws_region: il-central-1
+bucket_region: il-central-1
 aws_region_short: ilc1
 route53_hostedzone_id: Z1015433RZV9CXS5NKKV
 ssh_key_name: imtec
