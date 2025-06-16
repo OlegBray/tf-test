@@ -9,6 +9,17 @@ locals {
 
 
 
+  # Get a list of every path between root_deployments_directory and the path of
+  # the deployment
+  possible_config_dirs = [
+  for i in range(0, length(local.deployment_path_components) + 1) :
+  join("/", concat(
+  [local.root_deployments_dir],
+  slice(local.deployment_path_components, 0, i)
+  ))
+  ]
+
+
 
  # Generate a list of possible config files at every possible_config_dir
  # (support both .yml and .yaml)
@@ -55,12 +66,10 @@ EOF
 remote_state {
   backend = "s3"
   config  = {
-    role_arn       = "arn:aws:iam::${local.account_id}:role/terragrunt"
     bucket         = "${local.project}-terraform-${local.environment}"
     key            = "terragrunt/${path_relative_to_include()}/terraform.tfstate"
     encrypt        = true
     region         = local.bucket_region
-    dynamodb_table = "terraform-locks"
   }
 }
 

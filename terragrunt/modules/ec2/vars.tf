@@ -1,5 +1,5 @@
 
-variable "region" {
+variable "aws_region" {
   description = "AWS region"
 }
 
@@ -16,7 +16,10 @@ variable "ssh_key_name" {
   description = "Name of the existing Key Pair"
 }
 
-variable "security_group_id" {
+variable "sg_ids" {
   description = "Security Group ID to associate with the instance"
 }
 
+variable "instance_type" {
+	default = "t3.large"
+}
