@@ -39,7 +39,6 @@ locals {
 
   # Merge the maps together, with deeper configs overriding higher configs
   merged_config = merge(local.file_configs...)
-  instance_name = "${local.project}-instance-${local.environment}"
   project     = local.merged_config.project
   account_id  = local.merged_config.account_id
   environment = local.merged_config.environment
