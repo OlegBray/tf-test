@@ -1,3 +1,4 @@
 ami_id: ami-0ae7e1e8fb8251940
 sg_ids: ["sg-0ac3749215afde82a"]
 subnet_id: subnet-0d0b0b1b77639731b
+instance_name: "babi_eat_something"

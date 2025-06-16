@@ -23,3 +23,9 @@ variable "sg_ids" {
 variable "instance_type" {
 	default = "t3.large"
 }
+
+variable "instance_name" {
+}
+
+variable "environment" {
+}
