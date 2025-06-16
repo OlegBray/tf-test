@@ -1,3 +1,20 @@
+################
+
+variable "instance_name" {
+  description = "Name tag for the EC2 instance"
+}
+variable "owner" {
+  description = "Owner of the instance"
+}
+variable "environment" {
+  description = "Environment (e.g., dev/stage/prod)"
+}
+variable "public_subnet_ids" {
+  description = "List of public subnet IDs"
+  type        = list(string)
+}
+
+################
 
 variable "aws_region" {
   description = "AWS region"
@@ -8,9 +25,6 @@ variable "ami_id" {
   # You can override this variable during terraform apply
 }
 
-variable "subnet_id" {
-  description = "Subnet ID where the instance will be launched"
-}
 
 variable "ssh_key_name" {
   description = "Name of the existing Key Pair"

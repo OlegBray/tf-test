@@ -7,12 +7,14 @@ provider "aws" {
 resource "aws_instance" "linux_server" {
   ami                         = var.ami_id
   instance_type               = var.instance_type
-  subnet_id                   = var.subnet_id
+  subnet_id                   = var.public_subnet_ids[0]
   key_name                    = var.ssh_key_name
   vpc_security_group_ids          = [var.sg_ids]
   associate_public_ip_address = true
 
   tags = {
-    Name = "TerraformLinuxInstance"
+    Name        = var.instance_name
+    owner       = var.owner
+    environment = var.environment
   }
 }
