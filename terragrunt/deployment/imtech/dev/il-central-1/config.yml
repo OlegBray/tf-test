@@ -9,4 +9,7 @@ private_subnet_ids:
   - subnet-088b7d937a4cd5d85
 public_subnet_ids:
   - subnet-0d0b0b1b77639731b
-  - subnet-0a1cbd99dd27a5307 
+  - subnet-0a1cbd99dd27a5307
+is_public: false
+private_subnet: subnet-01e6348062924d048
+public_subnet: subnet-0d0b0b1b77639731b

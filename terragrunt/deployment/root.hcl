@@ -45,8 +45,10 @@ locals {
   environment = local.merged_config.environment
   aws_region  = local.merged_config.aws_region
   bucket_region = local.merged_config.bucket_region
-
-
+  route53_hostedzone_id = local.merged_config.route53_hostedzone_id
+  is_public = local.merged_config.is_public
+  private_subnet = local.merged_config.private_subnet
+  public_subnet = local.merged_config.public_subnet
 }
 
 inputs = local.merged_config

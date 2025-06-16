@@ -29,3 +29,20 @@ variable "instance_name" {
 
 variable "environment" {
 }
+
+variable "is_public" {
+	type = bool
+	default = false
+}
+
+variable "public_subnet" {
+  type = string
+}
+
+variable "private_subnet" {
+  type = string
+}
+
+variable "route53_hostedzone_id" {
+  type = string
+}
